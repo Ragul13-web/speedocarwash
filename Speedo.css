@@ -103,13 +103,13 @@ nav {
 .left-image
 {
   flex-grow: 1; /* Make the left image take up equal space */
-  width: 90%; /* Make the image fill its container */
+  width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
   position: relative; /* Position the image relative to its container */
 }
 
 .left-image img {
-  width: 175%; /* Make the image fill its container */
+  max-width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
   top: 0; /* Position the image at the top of its container */
   left: 0; /* Position the image at the left of its container */
@@ -118,16 +118,19 @@ nav {
 
 .right-image {
   flex-grow: 1; /* Make the right image take up equal space */
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .right-image img {
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
   position: relative; /* Position the image absolutely within its container */
   top: 0; /* Position the image at the top of its container */
   left: 0; /* Position the image at the left of its container */
   z-index: 1; /* Ensure the image is above other content */
 }
+
 .info-image {
   position: relative;
   top: 100%; /* Adjust as needed */
@@ -206,7 +209,6 @@ nav {
 }
 .line {
   content: '';
-  width: 100%; /* Adjust the width of the line */
   height: 2px; /* Adjust the height of the line */
   background-color: #2eaaea; /* Adjust the color of the line */
   margin: 10px 0; /* Adjust the margin to position the line */
@@ -363,5 +365,10 @@ footer {
 @media screen and (max-width: 768px) {
   footer {
     padding: 20px; /* Add padding */
+  }
+}
+@media (max-width: 768px) {
+  .line {
+    width: 90%; /* Adjust the width for smaller devices */
   }
 }
