@@ -208,10 +208,10 @@ nav {
   align-items: center; /* Center the images horizontally */
 }
 .line {
-  content: '';
-  height: 2px; /* Adjust the height of the line */
-  background-color: #2eaaea; /* Adjust the color of the line */
-  margin: 10px 0; /* Adjust the margin to position the line */
+  width: 100%;
+  height: 2px;
+  background-color: #2eaaea;
+  margin: 10px 0;
 }
 .insurance-images img {
   max-width: 100%; /* Make the image fill its container */
@@ -370,5 +370,11 @@ footer {
 @media (max-width: 768px) {
   .line {
     width: 90%; /* Adjust the width for smaller devices */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .line {
+    width: 100%; /* Adjust the width for smaller devices */
+    margin: 10px auto; /* Center the line horizontally */
   }
 }
