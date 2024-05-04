@@ -103,13 +103,13 @@ nav {
 .left-image
 {
   flex-grow: 1; /* Make the left image take up equal space */
-  width: 100%; /* Make the image fill its container */
+  width: 90%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
   position: relative; /* Position the image relative to its container */
 }
 
 .left-image img {
-  max-width: 100%; /* Make the image fill its container */
+  width: 175%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
   top: 0; /* Position the image at the top of its container */
   left: 0; /* Position the image at the left of its container */
@@ -118,25 +118,20 @@ nav {
 
 .right-image {
   flex-grow: 1; /* Make the right image take up equal space */
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
 }
 
 .right-image img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto;
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
   position: relative; /* Position the image absolutely within its container */
   top: 0; /* Position the image at the top of its container */
   left: 0; /* Position the image at the left of its container */
   z-index: 1; /* Ensure the image is above other content */
 }
-
 .info-image {
-  position: absolute;
-  top: 50%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
-  transform: translate(-50%, -50%); /* Center the image */
-  width: 50px; /* Adjust as needed */
+  position: relative;
+  top: 100%; /* Adjust as needed */
+  left: 0%; /* Adjust as needed */
   height: auto;
 }
 
@@ -209,7 +204,13 @@ nav {
   flex-direction: column; /* Arrange images in a column */
   align-items: center; /* Center the images horizontally */
 }
-
+.line {
+  content: '';
+  width: 100%; /* Adjust the width of the line */
+  height: 2px; /* Adjust the height of the line */
+  background-color: #2eaaea; /* Adjust the color of the line */
+  margin: 10px 0; /* Adjust the margin to position the line */
+}
 .insurance-images img {
   max-width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
@@ -218,8 +219,8 @@ nav {
 
 /* Footer styles */
 footer {
-  background-color: #fff;
-  color: #2eaaea;
+  background-color: #2eaaea;
+  color: #fff;
   padding: 20px;
   font-weight: bold; /* Make font bold */
   font-size: 15px; /* Increase font size */
@@ -238,7 +239,7 @@ footer {
 }
 
 .social-media a {
-  color: #2eaaea;
+  color: #fff;
   text-decoration: none;
 }
 .social-media img {
@@ -252,7 +253,6 @@ footer {
 
 /* Media queries for responsiveness */
 /* Media query for navigation bar */
-/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   /* Center-align the navigation links */
   .nav-links {
