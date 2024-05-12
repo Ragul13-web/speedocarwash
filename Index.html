@@ -120,51 +120,5 @@
       </li>
     </ul>
   </nav>
-
-  <!-- JavaScript to dynamically adjust image sizes -->
-  <script>
-    function adjustImageSizes() {
-      const screenWidth = window.innerWidth;
-
-      // Adjust image sizes based on screen width
-      const leftImage = document.querySelector('.left-image img');
-      const rightImage = document.querySelector('.right-image img');
-      const aboutImage = document.querySelector('#about img');
-      const multiBrandImage = document.querySelector('.multi-brand-img');
-      const serviceImages = document.querySelectorAll('.service-row img');
-      const insuranceImages = document.querySelectorAll('.insurance-images img');
-
-      if (screenWidth <= 768) { // Mobile devices
-        leftImage.style.width = '100%';
-        rightImage.style.width = '100%';
-        aboutImage.style.width = '100%';
-        multiBrandImage.style.width = '100%';
-
-        insuranceImages.forEach(img => {
-          img.style.width = '100%';
-        });
-      } else { // Tablets and desktops
-        // Reset image sizes to default
-        leftImage.style.width = '90%';
-        rightImage.style.width = '110%';
-        aboutImage.style.width = '100%';
-        multiBrandImage.style.width = '100%';
-
-        serviceImages.forEach(img => {
-          img.style.width = '250px';
-        });
-
-        insuranceImages.forEach(img => {
-          img.style.width = '100%';
-        });
-      }
-    }
-
-    // Call the function when the window is resized
-    window.addEventListener('resize', adjustImageSizes);
-
-    // Call the function on initial page load
-    adjustImageSizes();
-  </script>
 </body>
 </html>
