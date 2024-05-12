@@ -299,3 +299,58 @@ footer {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
   }
 }
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* Adjust image sizes for mobile devices */
+  .left-image img,
+  .right-image img,
+  #about img,
+  .multi-brand-img,
+  .insurance-images img,
+  .service-row img {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Hide the info image on smaller screens */
+  .info-image {
+    display: none;
+  }
+
+  /* Adjust margin between sections for smaller screens */
+  #home,
+  #about {
+    margin-top: 200px;
+    padding: 20px;
+  }
+
+  /* Center-align the footer social media icons */
+  .social-media {
+    justify-content: center;
+  }
+}
+
+/* Media query for navigation bar */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  /* Adjust the padding of the navigation */
+  nav {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Center-align the logo */
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Media query for footer */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  footer {
+    width: 100%;
+    padding: 10px 20px; /* Adjust padding for smaller devices */
+    font-size: 15px; /* Ensure font size remains consistent */
+  }
+}
