@@ -37,7 +37,9 @@
         
       </div>
     </section>   
-    
+    <div class="info-image">
+      <img src="Images/Info.png" alt="Information">
+    </div>
     <!-- Section 2: About -->
     <section id="about">
       <img src="Images/Aboutus.png" alt="About Us">
@@ -86,6 +88,12 @@
           70109&nbsp;67338
         </a>
       </li>
+      <!-- <li>
+        <a href="https://api.whatsapp.com/send?phone=7010967338" target="_blank">
+          <img src="Images/Whatsapp.png" alt="WhatsApp Logo"><br/>
+          70109&nbsp;67338
+        </a>
+      </li> -->
       <li>
         <a href="https://www.facebook.com/profile.php?id=61557384205909" target="_blank">
           <img src="Images/Facebook.png" alt="Facebook Logo"><br/>
@@ -113,5 +121,54 @@
     </ul>
   </footer>
 
+  <!-- JavaScript to dynamically adjust image sizes -->
+  <script>
+    function adjustImageSizes() {
+      const screenWidth = window.innerWidth;
+
+      // Adjust image sizes based on screen width
+      const leftImage = document.querySelector('.left-image img');
+      const rightImage = document.querySelector('.right-image img');
+      const aboutImage = document.querySelector('#about img');
+      const multiBrandImage = document.querySelector('.multi-brand-img');
+      const serviceImages = document.querySelectorAll('.service-row img');
+      const insuranceImages = document.querySelectorAll('.insurance-images img');
+
+      if (screenWidth <= 768) { // Mobile devices
+        leftImage.style.width = '100%';
+        rightImage.style.width = '100%';
+        aboutImage.style.width = '100%';
+        multiBrandImage.style.width = '100%';
+
+        serviceImages.forEach(img => {
+          img.style.width = '30%';
+        });
+
+        insuranceImages.forEach(img => {
+          img.style.width = '100%';
+        });
+      } else { // Tablets and desktops
+        // Reset image sizes to default
+        leftImage.style.width = '90%';
+        rightImage.style.width = '110%';
+        aboutImage.style.width = '100%';
+        multiBrandImage.style.width = '100%';
+
+        serviceImages.forEach(img => {
+          img.style.width = '250px';
+        });
+
+        insuranceImages.forEach(img => {
+          img.style.width = '100%';
+        });
+      }
+    }
+
+    // Call the function when the window is resized
+    window.addEventListener('resize', adjustImageSizes);
+
+    // Call the function on initial page load
+    adjustImageSizes();
+  </script>
 </body>
 </html>
