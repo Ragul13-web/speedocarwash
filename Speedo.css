@@ -36,7 +36,7 @@ p {
   padding: 10px 20px;
   background-color: #2eaaea; /* Updated background color */
   color: #fff;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000;
 }
 
 .logo img {
@@ -44,23 +44,25 @@ p {
   height: auto; /* Maintain aspect ratio */
 }
 
-.nav-links {
+.nav-links, .bottom-nav ul {
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow contents to wrap */
 }
 
-.nav-links li {
+.nav-links li, .bottom-nav li {
   margin-right: 40px;
   font-weight: bold;
 }
 
-.nav-links a {
+.nav-links a, .bottom-nav a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color change and transform */
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .bottom-nav a:hover {
   color: black; /* Change font color to black on hover */
   transform: scale(1.1); /* Scale up the nav link on hover */
 }
@@ -164,8 +166,8 @@ p {
 
 .service-images {
   display: flex;
-  flex-direction: column; /* Arrange images in a column */
-  align-items: center; /* Center the images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
 }
 
 .service-row {
@@ -175,7 +177,7 @@ p {
 }
 
 .service-row img {
-  width: 250px; /* Set a fixed width for the images */
+  width: calc(33.33% - 20px); /* Set a fixed width for the images */
   height: auto; /* Maintain aspect ratio */
   margin: 10px; /* Add some horizontal spacing between images */
   transition: box-shadow 0.3s ease; /* Add transition for box-shadow effect */
@@ -225,11 +227,15 @@ p {
 /* Footer styles */
 /* Second Navigation styles */
 .bottom-nav {
-  width: 100%; /* Default width */
+  width: 97%; /* Adjust width for mobile devices */
   background-color: #2eaaea;
   color: #fff;
   padding: 10px 20px;
   z-index: 1000;
+  position: relative;
+  margin: auto; /* Center-align the navigation */
+  flex-wrap: wrap; /* Allow contents to wrap */
+  justify-content: space-between; /* Center-align contents */
 }
 
 .bottom-nav ul {
@@ -260,8 +266,17 @@ p {
 }
 
 /* Media queries for responsiveness */
-/* Media query for navigation bar */
 @media screen and (max-width: 768px) {
+  /* Center-align contents within the container for smaller screens */
+  .container {
+    padding: 0 10px; /* Add padding for better spacing on smaller screens */
+  }
+
+  /* Center-align the footer social media icons */
+  .social-media {
+    justify-content: center;
+  }
+
   /* Center-align the navigation links */
   .nav-links {
     justify-content: center;
@@ -280,32 +295,6 @@ p {
     bottom: 20px; /* Adjust as needed */
   }
 
-  /* Center-align the footer social media icons */
-  .social-media {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Center-align contents within the container for smaller screens */
-  .container {
-    padding: 0 10px; /* Add padding for better spacing on smaller screens */
-  }
-}
-
-/* Media queries for responsiveness */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  /* Adjust image sizes for mobile devices */
-  .left-image img,
-  .right-image img,
-  #about img,
-  .multi-brand-img,
-  .insurance-images img,
-  .service-row img {
-    width: 100%; /* Make images fill the container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
   /* Hide the info image on smaller screens */
   .info-image {
     display: none;
@@ -318,20 +307,14 @@ p {
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
   }
-
-  /* Center-align the footer social media icons */
-  .social-media {
-    justify-content: center;
-  }
 }
 
 /* Media query for navigation bar */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Adjust the padding of the navigation */
-  .bottom-nav,.top-nav {
-    width: 100%;
+  .top-nav, .bottom-nav {
     padding: 10px 0;
-    margin: 0 auto; /* Center-align the navigation */
+    width: 100%;
   }
 
   /* Center-align the logo */
@@ -341,3 +324,23 @@ p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  /* Adjust the padding of the navigation */
+  .top-nav, .bottom-nav {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .service-row img {
+    width: calc(30% - 20px); /* Set a fixed width for the images */
+  }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 480px) {
+  .service-row img {
+    width: calc(100% - 20px); /* Set a fixed width for the images */
+  }
+}
