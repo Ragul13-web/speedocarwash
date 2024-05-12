@@ -124,6 +124,7 @@ nav {
   right: 15px;
 }
 
+
 .right-image img {
   max-width: 100%; /* Make the image responsive */
   height: auto;
@@ -300,7 +301,7 @@ footer {
 }
 
 /* Media query for home section */
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .left-image img,
   .right-image img,
   #about img,
@@ -322,14 +323,14 @@ footer {
 }
 
 /* Media query for services section */
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .service-images {
     flex-direction: column; /* Stack service rows vertically */
     align-items: center; /* Center-align service images */
   }
 
   .service-row img {
-    width: 250px; /* Set a fixed width for the images */
+    width: 30%; /* Set width to 30% for mobile devices */
     height: auto; /* Maintain aspect ratio */
     margin: 10px; /* Add some horizontal spacing between images */
   }
