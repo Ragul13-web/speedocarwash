@@ -107,7 +107,6 @@ nav {
   position: relative; /* Position the image relative to its container */
   left: 15px;
 }
-
 .left-image img {
   max-width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
@@ -234,9 +233,6 @@ footer {
   text-align: center; /* Center-align text */
   width: 99%; /* Set maximum width to prevent horizontal overflow */
   z-index: 1000;
-  position: relative;
-  left: 0;
-  rkgnt: 0;
 }
 
 .social-media {
@@ -303,40 +299,3 @@ footer {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
   }
 }
-
-/* Media query for home section */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .left-image img,
-  .right-image img,
-  #about img,
-  .multi-brand-img,
-  .insurance-images img {
-    width: 100%; /* Make images fill the container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .info-image {
-    display: none; /* Hide info image on smaller screens */
-  }
-
-  #home,
-  #about {
-    margin-top: 200px; /* Adjust the margin between sections */
-    padding: 20px; /* Add padding to the sections */
-  }
-}
-
-/* Media query for services section */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .service-images {
-    flex-direction: column; /* Stack service rows vertically */
-    align-items: center; /* Center-align service images */
-  }
-
-  .service-row img {
-    width: 30%; /* Set width to 30% for mobile devices */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px; /* Add some horizontal spacing between images */
-  }
-}
-
