@@ -227,12 +227,13 @@ nav {
 footer {
   background-color: #2eaaea;
   color: #fff;
-  padding: 20px 0; /* Add padding to the top and bottom */
+  padding: 10px 20px; /* Add padding to the top and bottom */
   font-weight: bold; /* Make font bold */
   font-size: 15px; /* Increase font size */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center; /* Center-align text */
-  max-width: 100%; /* Set maximum width to prevent horizontal overflow */
+  width: 99%; /* Set maximum width to prevent horizontal overflow */
+  z-index: 1000;
 }
 
 .social-media {
