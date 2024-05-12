@@ -348,9 +348,41 @@ footer {
 
 /* Media query for footer */
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  footer {
+ footer {
     width: 100%;
-    padding: 10px 20px; /* Adjust padding for smaller devices */
+    padding: 10px 0; /* Adjust padding for smaller devices */
     font-size: 15px; /* Ensure font size remains consistent */
+    text-align: center; /* Center-align text */
+    position: fixed; /* Fixed position to stick at the bottom */
+    bottom: 0; /* Align at the bottom */
+    background-color: #2eaaea; /* Background color */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-media li {
+    margin: 0 10px;
+  }
+
+  .social-media a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-media img {
+    width: 40px; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Optional: Add some spacing between the image and text */
+  }
+
+  .social-media li:hover {
+    transform: scale(1.1); /* Scale up the nav link on hover */
   }
 }
