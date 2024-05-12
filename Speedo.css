@@ -234,6 +234,9 @@ footer {
   text-align: center; /* Center-align text */
   width: 99%; /* Set maximum width to prevent horizontal overflow */
   z-index: 1000;
+  position: relative;
+  left: 0;
+  rkgnt: 0;
 }
 
 .social-media {
@@ -337,10 +340,3 @@ footer {
   }
 }
 
-/* Media query for footer */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  footer {
-    padding: 20px 0; /* Adjust padding for smaller devices */
-    width: 100%;
-  }
-}
