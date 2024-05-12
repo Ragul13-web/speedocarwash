@@ -224,31 +224,31 @@ nav {
 
 /* Footer styles */
 footer {
-  background-color: #2eaaea;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 99%;
+  padding: 10px 20px;
+  background-color: #2eaaea; /* Updated background color */
   color: #fff;
-  padding: 10px 20px; /* Add padding to the top and bottom */
-  font-weight: bold; /* Make font bold */
-  font-size: 15px; /* Increase font size */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center; /* Center-align text */
-  width: 99%; /* Set maximum width to prevent horizontal overflow */
-  z-index: 1000;
 }
 
 .social-media {
   list-style-type: none;
-  padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .social-media li {
-  margin: 0 10px;
+  margin-right: 40px;
+  font-weight: bold;
 }
 
 .social-media a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color change and transform */
+
 }
 
 .social-media img {
