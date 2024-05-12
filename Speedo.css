@@ -25,7 +25,7 @@ p {
 }
 
 /* Navigation styles */
-nav {
+.top-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -223,42 +223,42 @@ nav {
 }
 
 /* Footer styles */
-footer {
-  position: relative;
-  top: 0;
+/* Second Navigation styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 99%;
-  padding: 10px 20px;
-  background-color: #2eaaea; /* Updated background color */
+  width: 100%;
+  background-color: #2eaaea;
   color: #fff;
+  padding: 10px 20px;
 }
 
-.social-media {
+.bottom-nav ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.social-media li {
-  margin-right: 40px;
-  font-weight: bold;
+.bottom-nav li {
+  margin-right: 20px;
+  font-size: 14px;
 }
 
-.social-media a {
+.bottom-nav a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color change and transform */
-
 }
 
-.social-media img {
-  width: 40px; /* Adjust the width to your desired size */
+.bottom-nav a:hover {
+  text-decoration: underline;
+}
+.bottom-nav img {
+  width: 40px; /* Set a fixed width for the logo */
   height: auto; /* Maintain aspect ratio */
-  margin-right: 5px; /* Optional: Add some spacing between the image and text */
-}
-
-.social-media li:hover {
-  transform: scale(1.1); /* Scale up the nav link on hover */
 }
 
 /* Media queries for responsiveness */
@@ -348,41 +348,9 @@ footer {
 
 /* Media query for footer */
 @media screen and (min-width: 320px) and (max-width: 768px) {
- footer {
+  footer {
     width: 100%;
-    padding: 10px 0; /* Adjust padding for smaller devices */
+    padding: 10px 20px; /* Adjust padding for smaller devices */
     font-size: 15px; /* Ensure font size remains consistent */
-    text-align: center; /* Center-align text */
-    position: fixed; /* Fixed position to stick at the bottom */
-    bottom: 0; /* Align at the bottom */
-    background-color: #2eaaea; /* Background color */
-    z-index: 1000; /* Ensure it stays above other content */
-  }
-
-  .social-media {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .social-media li {
-    margin: 0 10px;
-  }
-
-  .social-media a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .social-media img {
-    width: 40px; /* Adjust the width to your desired size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 5px; /* Optional: Add some spacing between the image and text */
-  }
-
-  .social-media li:hover {
-    transform: scale(1.1); /* Scale up the nav link on hover */
   }
 }
