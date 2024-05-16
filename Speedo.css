@@ -157,11 +157,18 @@ p {
 #services {
   text-align: center; /* Center-align the content */
   padding: 20px; /* Add some padding */
+  margin: 100px 0;
 }
 
 .service-image {
-  max-width: 100%; /* Adjust as needed */
+  width: 100%;
   height: auto;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.05);
 }
 
 .service-images {
@@ -169,7 +176,10 @@ p {
   flex-wrap: wrap; /* Allow images to wrap on smaller screens */
   justify-content: space-around; /* Distribute items evenly along the main axis */
 }
-
+.service-images img {
+  width: 150px; /* Adjust service images size */
+  height: auto; /* Maintain aspect ratio */
+}
 .service-row {
   display: flex;
   justify-content: center; /* Center the images horizontally */
@@ -188,6 +198,37 @@ p {
   transform: scale(1.1); /* Scale the image on hover */
 }
 
+.service-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.service-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border: none; /* Ensure no borders are applied */
+}
+
+.service-logo {
+  width: calc(33.33% - 5px); /* Same size as the nav bar logo */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 100px; /* Space between logos */
+  padding: 0 50px;
+}
+
+.service-button-group button img {
+  width: 80%; /* Adjust the button image size to match service images */
+  height: 150%; /* Maintain aspect ratio */
+  cursor: pointer;
+}
+
+
 /* Multi-Brand Services section styles */
 #multi-services {
   text-align: center; /* Center-align the content */
@@ -201,10 +242,44 @@ p {
 
 /* Insurance section styles */
 #insurance-services {
-  text-align: center; /* Center-align the content */
-  padding: 20px; /* Add some padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.insurance-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.insurance-img {
+  width: 70%;
+  height: auto;
+  margin-right: 20px;
+}
+.insurance-text {
+  max-width: 50%;
 }
 
+.insurance-text h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2eaaea;
+}
+
+.insurance-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.car-wash-img {
+  max-width: 100%;
+  height: auto;
+}
 .insurance-images {
   display: flex;
   flex-direction: column; /* Arrange images in a column */
@@ -218,11 +293,6 @@ p {
   margin: 10px 0;
 }
 
-.insurance-images img {
-  max-width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
-  margin: 10px 0; /* Add some vertical spacing between images */
-}
 
 /* Footer styles */
 /* Second Navigation styles */
@@ -249,7 +319,7 @@ p {
 
 .bottom-nav li {
   margin-right: 20px;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .bottom-nav a {
@@ -336,11 +406,38 @@ p {
   .service-row img {
     width: calc(30% - 20px); /* Set a fixed width for the images */
   }
+  .service-row {
+    flex-wrap: wrap;
+  }
 }
 
 /* Media query for responsiveness */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 375px) {
   .service-row img {
     width: calc(100% - 20px); /* Set a fixed width for the images */
+  }
+  #home{
+    margin-top: 60px;
+  }
+  .service-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .insurance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .insurance-img,
+  .insurance-text,
+  .car-wash-img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .insurance-img {
+    margin-bottom: 20px;
   }
 }
