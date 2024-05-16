@@ -302,9 +302,8 @@ p {
   width: 100%; /* Adjust width for mobile devices */
   background-color: #2eaaea;
   color: #fff;
-  padding: 10px 30px;
+  padding: 10px 20px;
   z-index: 1000;
-  display: flex;
   position: relative;
   margin: auto; /* Center-align the navigation */
   flex-wrap: wrap; /* Allow contents to wrap */
@@ -318,7 +317,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .bottom-nav li {
@@ -345,7 +343,7 @@ p {
   .container {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
     justify-content: center;
-    margin-top: 30%;
+    margin-top: 50%;
   }
 
   /* Center-align the footer social media icons */
@@ -414,7 +412,7 @@ p {
     flex-wrap: wrap;
   }
  .bottom-nav{
-  padding: 0 25px;
+  padding: 0 20px;
  }
   /* Center-align the logo */
   .logo {
