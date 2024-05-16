@@ -345,6 +345,7 @@ p {
   .container {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
     justify-content: center;
+    margin-top: 30%;
   }
 
   /* Center-align the footer social media icons */
@@ -413,7 +414,7 @@ p {
     flex-wrap: wrap;
   }
  .bottom-nav{
-  padding: 0 20px;
+  padding: 0 25px;
  }
   /* Center-align the logo */
   .logo {
