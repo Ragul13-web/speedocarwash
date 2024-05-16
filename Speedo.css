@@ -258,12 +258,13 @@ p {
   margin-bottom: 20px;
 }
 .insurance-img {
-  width: 70%;
+  width: 80%;
   height: auto;
   margin-right: 20px;
 }
 .insurance-text {
-  max-width: 50%;
+  max-width: 50%;  
+  text-align: center;
 }
 
 .insurance-text h3 {
@@ -274,7 +275,7 @@ p {
 }
 
 .insurance-text p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -407,13 +408,15 @@ p {
 @media screen and (max-width: 768px) {
   /* Adjust the padding of the navigation */
   .top-nav, .bottom-nav {
-    padding: 10px 0;
     width: 100%;
     flex-wrap: wrap;
   }
  .bottom-nav{
   padding: 0 20px;
  }
+  .top-nav{
+    gap: 5px;
+  }
   /* Center-align the logo */
   .logo {
     margin-right: auto;
