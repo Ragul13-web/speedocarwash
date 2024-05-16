@@ -299,11 +299,12 @@ p {
 /* Footer styles */
 /* Second Navigation styles */
 .bottom-nav {
-  width: 97%; /* Adjust width for mobile devices */
+  width: 100%; /* Adjust width for mobile devices */
   background-color: #2eaaea;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 30px;
   z-index: 1000;
+  display: flex;
   position: relative;
   margin: auto; /* Center-align the navigation */
   flex-wrap: wrap; /* Allow contents to wrap */
@@ -411,7 +412,9 @@ p {
     width: 100%;
     flex-wrap: wrap;
   }
-
+ .bottom-nav{
+  padding: 0 15px;
+ }
   /* Center-align the logo */
   .logo {
     margin-right: auto;
