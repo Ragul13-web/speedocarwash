@@ -37,6 +37,7 @@ p {
   background-color: #2eaaea; /* Updated background color */
   color: #fff;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -204,7 +205,6 @@ p {
   align-items: center;
   margin-top: 20px;
   justify-content: space-between;
-  gap: 50px;
 }
 
 .service-button-group {
@@ -218,7 +218,7 @@ p {
 .service-logo {
   width: calc(33.33% - 5px); /* Same size as the nav bar logo */
   height: auto; /* Maintain aspect ratio */
-  margin: 0 100px; /* Space between logos */
+  margin: 0;/* Space between logos */
   padding: 0 50px;
 }
 
@@ -315,6 +315,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .bottom-nav li {
@@ -340,6 +341,7 @@ p {
   /* Center-align contents within the container for smaller screens */
   .container {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
+    justify-content: center;
   }
 
   /* Center-align the footer social media icons */
@@ -377,6 +379,26 @@ p {
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
   }
+  #home {
+    margin-top: 160px; /* Adjust margin to keep content below navigation */
+  }
+
+  /* Increase size of about us image for mobile */
+  #about img {
+    max-width: 90%; /* Increase max-width for better visibility */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Center-align all section contents for mobile */
+  #home,
+  #about,
+  #services,
+  #multi-services,
+  #insurance-services {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding for better spacing */
+    margin: auto; /* Center the sections */
+  }
 }
 
 /* Media query for navigation bar */
@@ -385,6 +407,7 @@ p {
   .top-nav, .bottom-nav {
     padding: 10px 0;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   /* Center-align the logo */
@@ -394,11 +417,12 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
   /* Adjust the padding of the navigation */
   .top-nav, .bottom-nav {
     padding: 10px 0;
     width: 100%;
+    flex-wrap: wrap;
   }
 }
 /* Media query for responsiveness */
@@ -417,7 +441,7 @@ p {
     width: calc(100% - 20px); /* Set a fixed width for the images */
   }
   #home{
-    margin-top: 60px;
+    margin-top: 160px;
   }
   .service-row {
     flex-wrap: wrap;
@@ -439,5 +463,34 @@ p {
 
   .insurance-img {
     margin-bottom: 20px;
+  }
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 576px) {
+  /* Adjust the width of the navigation bars */
+  .top-nav, .bottom-nav {
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  /* Make home section visible on smaller screens */
+  #home {
+    margin-top: 140px; /* Adjust margin to keep content below navigation */
+  }
+
+  /* Increase size of about us image for smaller screens */
+  #about img {
+    max-width: 100%; /* Increase max-width for better visibility */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Center-align all section contents for smaller screens */
+  #home,
+  #about,
+  #services,
+  #multi-services,
+  #insurance-services {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding for better spacing */
+    margin: auto; /* Center the sections */
   }
 }
