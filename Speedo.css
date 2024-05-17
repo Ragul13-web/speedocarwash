@@ -353,7 +353,7 @@ p {
   .container {
     padding: 0 10px; /* Add padding for better spacing on smaller screens */
     justify-content: center;
-    margin: 0 50% 0 0;
+    margin: 50% 0 0 0;
   }
 
   /* Center-align the footer social media icons */
