@@ -91,58 +91,67 @@ p {
   color: black; /* Change font color to black on hover */
 }
 
-/* Home section styles */
+/* Home section styles
 #home {
   display: flex;
   justify-content: space-between;
-  margin-top: 140px; /* Adjust this value to match the height of your navigation bar */
+  margin-top: 140px; 
 }
 
 .shop-details {
   display: flex;
-  flex-grow: 1; /* Allow the shop details div to grow to fill the available space */
+  flex-grow: 1;  
 }
 
 .left-image {
-  flex-grow: 1; /* Make the left image take up equal space */
-  width: 90%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
-  position: relative; /* Position the image relative to its container */
+  flex-grow: 1; 
+  width: 90%; 
+  height: auto; 
+  position: relative;
   left: 15px;
 }
 .left-image img {
-  max-width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
-  top: 0; /* Position the image at the top of its container */
-  left: 0; /* Position the image at the left of its container */
-  z-index: 1; /* Ensure the image is above other content */
+  max-width: 100%;
+  height: auto;
+  top: 0; 
+  left: 0; 
+  z-index: 1; 
 }
 
 .right-image {
-  flex-grow: 1; /* Make the right image take up equal space */
-  width: 110%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
+  flex-grow: 1; 
+  width: 110%;
+  height: auto;
   position: relative;
   right: 15px;
 }
 
 
 .right-image img {
-  max-width: 100%; /* Make the image responsive */
+  max-width: 100%; 
   height: auto;
-  position: relative; /* Position the image absolutely within its container */
-  top: 0; /* Position the image at the top of its container */
-  left: 0; /* Position the image at the left of its container */
-  z-index: 1; /* Ensure the image is above other content */
+  position: relative; 
+  top: 0;
+  left: 0; 
+  z-index: 1;
 }
 
 .info-image {
   position: relative;
-  top: 100%; /* Adjust as needed */
-  left: 0%; /* Adjust as needed */
+  top: 100%;
+  left: 0%;
   height: auto;
+}*/
+#home {
+  text-align: center; /* Center-align the content */
+  padding: 20px; /* Add padding */
+  margin-top: 150px;
 }
 
+#home img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+}
 /* About section styles */
 #about {
   text-align: center; /* Center-align the content */
@@ -411,12 +420,12 @@ p {
     width: 100%;
     flex-wrap: wrap;
   }
+  .top-nav li, .bottom-nav li {
+   padding: 20px;
+  }
  .bottom-nav{
   padding: 0 20px;
  }
-  .top-nav{
-    gap: 5px;
-  }
   /* Center-align the logo */
   .logo {
     margin-right: auto;
