@@ -421,7 +421,7 @@ p {
     flex-wrap: wrap;
   }
   .top-nav li, .bottom-nav li {
-   padding:  0 20px;
+   padding:  15px;
     margin: 0;
   }
  .bottom-nav{
