@@ -9,9 +9,9 @@
 <body>
 
   <!-- Navigation -->
-  <nav  class="top-nav">
+  <nav class="top-nav">
     <div class="logo">
-      <img src="/Images/Speedo_Carwash_Logo.png" alt="Speedo Water Wash Logo">
+      <img src="/Images/speedo_carewash.png" alt="Speedo Water Wash Logo" width="250" height="100">
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -24,151 +24,177 @@
   <!-- Body -->
   <div class="container">
     <a href="tel:+917010967338" class="enquiry-button">For Enquiry</a>
-    <!-- Section 1: Shop Name and Address -->
-    <section id="home">
-      <!-- <div class="shop-details"> -->
-        <!-- First image hidden under nav -->
-        <!-- <div class="left-image">
-          <img src="Images/Landing_page.png" alt="Speedo Water Wash Shop">
-        </div>
-        <div class="right-image">
-          <img src="Images/Landing_page_2.png" alt="Speedo Water Wash Shop">
-        </div>  
-      </div>       -->
-          <img src="Images/beautiful-car-washing-service.jpg" alt="Speedo Water Wash Shop">
-    </section>   
-    <!-- <div class="info-image">
-      <img src="Images/Info.png" alt="Information">
-    </div> -->
-    <!-- Section 2: About -->
-    <section id="about">
-      <img src="Images/Aboutus.png" alt="About Us">
-    </section>
-
-    <!-- Section 3: Services -->
-    <!-- <section id="services">
-      <img src="Images/Ourservices.png" alt="Our Services" class="service-image">
-      <div class="service-images">
-        <div class="service-row">
-          <img src="Images/Waterwash.png" alt="Water Wash">
-          <img src="Images/Casiswash.png" alt="Chasis Wash">
-          <img src="Images/Rubbingpaint.png" alt="Rubbing Paint">
-        </div>
-        <div class="service-row">
-          <img src="Images/Ceramiccoating.png" alt="Ceramic Coating">
-          <img src="Images/Interiorcleaning.png" alt="Interior Cleaning">
-          <img src="Images/Waxpolish.png" alt="Wax Polish">
-        </div>
-      </div>
-    </section> -->
-    <!-- Section 3: Services -->
-    <section id="services">
-      <img src="Images/Ourservices.png" alt="Our Services" class="service-image">
-      <div class="service-links">
-        <div class="service-button-group">
-          <img src="Images/Speedo_Carwash_Logo.png" alt="Speedo Car Wash Logo" class="service-logo">
-          <img src="Images/Speedo_Carcare_Logo.png" alt="Speedo Car Care Logo" class="service-logo">
-        </div>
-        <div class="service-button-group">
-          <button onclick="showSpeedoWaterWash()" style="border: none;">
-            <img src="Images/CarWashButton.png" alt="Speedo Water Wash Button">
-          </button>
-          <button onclick="showSpeedoCarCare()" style="border: none;">
-            <img src="Images/CarCareButton.png" alt="Speedo Car Care Button">
-          </button>
-        </div>
-      </div>
-      <div id="speedo-water-wash" class="service-images" style="display: none;">
-        
-        <div class="service-row">
-          <img src="Images/Waterwash.png" alt="Water Wash">
-          <img src="Images/Casiswash.png" alt="Chasis Wash">
-          <img src="Images/Rubbingpaint.png" alt="Rubbing Paint">
-        </div>
-        <div class="service-row">
-          <img src="Images/Ceramiccoating.png" alt="Ceramic Coating">
-          <img src="Images/Interiorcleaning.png" alt="Interior Cleaning">
-          <img src="Images/Waxpolish.png" alt="Wax Polish">
-        </div>
-      </div>
-      <div id="speedo-car-care" class="service-images" style="display: none;">
-        <div class="service-row">
-          <img src="Images/MechanicWork.png" alt="Car Care Image 1">
-          <img src="Images/ElectricalWork.png" alt="Car Care Image 2">
-          <img src="Images/CarDiagnose.png" alt="Car Care Image 3">
-        </div>
-        <div class="service-row">
-          <img src="Images/Tinkering.png" alt="Car Care Image 4">
-          <img src="Images/ExteriorPolish.png" alt="Car Care Image 5">
-          <img src="Images/InteriorPolish.png" alt="Car Care Image 6">
-        </div>
-      </div>
-    </section>
     
-    <!-- Section 4: Multi-Brand Services -->
-    <section id="multi-brand-services">
-      <div class="multi-brand-content">
-        <img src="Images/Multibrandservices.png" alt="Multi-Brand Services Image" class="multi-brand-img">
-      </div>
-    </section>
-
-    <!-- Section 5: Insurance Services -->
-    <section id="insurance-services">
-      <div class="insurance-content">
-        <div class="insurance-images">
-          <img src="Images/InsuranceDetails.png" alt="Insurance Image" class="insurance-img">
-        </div>
-        <div class="insurance-text">
-          <h3>Speedo Car Wash and Insurance Services</h3>
-          <p>
-            At Speedo Car Wash, we deliver exceptional car cleaning services, including exterior washing, wheel and tire cleaning, and eco-friendly cleaning agents to preserve your car's finish. Our interior cleaning involves vacuuming, upholstery cleaning, and dashboard polishing. We also provide specialized services like underbody wash and engine cleaning. Complementing our car wash services, we offer comprehensive insurance solutions. Partnering with leading providers, we guide you in selecting the best coverage options, including third-party liability and comprehensive coverage. Our team ensures a hassle-free claims process, giving you peace of mind on the road. Trust Speedo for both impeccable car care and reliable insurance protection.
-          </p>
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="insurance-images">
-        <img src="Images/Carwash.png" alt="Car Wash Image" class="car-wash-img">
-      </div>
-    </section>
-     
-  
+    <!-- Table Layout -->
+    <table class="content-table">
+      <tr id="home">
+        <td colspan="2">
+          <img src="Images/Landing_1_main.png" alt="Speedo Water Wash Shop" class="responsive-img" width="1920" height="1080">
+        </td>
+      </tr>
+      <tr id="about">
+        <td colspan="2">
+          <div class="about-section">
+            <h3>About Us</h3>
+            <div class="about-content">
+              <img src="Images/Aboutus.png" alt="About Us" class="responsive-img about-img" width="800" height="600">
+              <div class="about-text">
+                <p>
+                  Welcome to Speedo Car Wash, your premier destination for exceptional car cleaning and detailing services. 
+                  Founded with a passion for automotive excellence, we pride ourselves on providing top-notch care for your vehicle. 
+                  Our state-of-the-art facilities and advanced cleaning technologies ensure that every car we handle receives the best possible treatment. 
+                  At Speedo Car Wash, we offer a comprehensive range of services, including exterior washing, interior detailing, waxing, polishing, 
+                  and ceramic coating, all designed to keep your car looking brand new. Our skilled team of professionals is dedicated to delivering 
+                  outstanding results with meticulous attention to detail. We use eco-friendly products and sustainable practices to protect both your 
+                  vehicle and the environment. Customer satisfaction is our top priority.
+                  Join the Speedo Car Wash family and experience the difference in quality and service. Your car deserves the best, and we're here to provide it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>          
+      <tr id="services">
+        <td colspan="2">
+          <div>
+            <h3>OUR SERVICES</h3>
+          </div>
+          <div class="service-links">
+            <div class="service-button-group">
+              <img src="Images/speedo_carewash.png" alt="Speedo Car Wash Logo" class="service-logo" width="150" height="100">
+              <img src="Images/Speedo_car care.png" alt="Speedo Car Care Logo" class="service-logo" width="150" height="100">
+            </div>
+            <div class="service-button-group">
+              <button onclick="showSpeedoWaterWash()" style="border: none;">
+                <img src="Images/Water wash.png" alt="Speedo Water Wash Button" width="200" height="200">
+              </button>
+              <button onclick="showSpeedoCarCare()" style="border: none;">
+                <img src="Images/Mechanical.png" alt="Speedo Car Care Button" width="200" height="200">
+              </button>
+            </div>
+          </div>
+          <div id="speedo-water-wash" class="service-images" style="display: none;">
+            <div class="service-row">
+              <div class="service-item">
+                <img src="Images/Water wash_1.png" alt="Water Wash" class="responsive-img" width="400" height="400">
+                <p>Water Wash</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Under_Chasiss_paint.png" alt="Chasis Wash" class="responsive-img" width="400" height="400">
+                <p>Chasis Wash</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Rubbing_polish.png" alt="Rubbing Paint" class="responsive-img" width="400" height="400">
+                <p>Rubbing Paint</p>
+              </div>
+            </div>
+            <div class="service-row">
+              <div class="service-item">
+                <img src="Images/Ceramic_coating.png" alt="Ceramic Coating" class="responsive-img" width="400" height="400">
+                <p>Ceramic Coating</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/interior cleaning_1.png" alt="Interior Cleaning" class="responsive-img" width="400" height="400">
+                <p>Interior Cleaning</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Wax polish.png" alt="Wax Polish" class="responsive-img" width="400" height="400">
+                <p>Wax Polish</p>
+              </div>
+            </div>
+          </div>
+          <div id="speedo-car-care" class="service-images" style="display: none;">
+            <div class="service-row">
+              <div class="service-item">
+                <img src="Images/AC_Service.png" alt="Car Care Image 1" class="responsive-img" width="400" height="400">
+                <p>AC Service</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Electrical_work.png" alt="Car Care Image 2" class="responsive-img" width="400" height="400">
+                <p>Electrical Work</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Exterior polish_1.png" alt="Car Care Image 3" class="responsive-img" width="400" height="400">
+                <p>Exterior Polish</p>
+              </div>
+            </div>
+            <div class="service-row">
+              <div class="service-item">
+                <img src="Images/Tinkering_painting.png" alt="Car Care Image 4" class="responsive-img" width="400" height="400">
+                <p>Tinkering & Painting</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Exterior_polish.png" alt="Car Care Image 5" class="responsive-img" width="400" height="400">
+                <p>Exterior Polish</p>
+              </div>
+              <div class="service-item">
+                <img src="Images/Mechanical.png" alt="Car Care Image 6" class="responsive-img" width="400" height="400">
+                <p>Mechanical Service</p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>        
+      <tr id="multi-brand-services">
+        <td colspan="2">
+          <div class="multi-brand-content">
+            <h3>Multi-Brand Services</h3>
+            <img src="Images/multiband car service.png" alt="Multi-Brand Services Image" class="multi-brand-img responsive-img" width="1920" height="1080">
+          </div>
+        </td>
+      </tr>      
+      <tr id="insurance-services">
+        <td colspan="2">
+          <div class="insurance-content">
+            <h3>Speedo Insurance Services</h3>
+            <div class="insurance-images">
+              <img src="Images/insurance.png" alt="Insurance Image" class="insurance-img responsive-img" width="800" height="600">
+            </div>
+            <div class="insurance-text">
+              <p>
+                At Speedo Car Wash, we deliver exceptional car cleaning services, including exterior washing, wheel and tire cleaning, and eco-friendly cleaning agents to preserve your car's finish. Our interior cleaning involves vacuuming, upholstery cleaning, and dashboard polishing. We also provide specialized services like underbody wash and engine cleaning. Complementing our car wash services, we offer comprehensive insurance solutions. Partnering with leading providers, we guide you in selecting the best coverage options, including third-party liability and comprehensive coverage. Our team ensures a hassle-free claims process, giving you peace of mind on the road. Trust Speedo for both impeccable car care and reliable insurance protection.
+              </p>
+            </div>
+            <div class="line"></div>
+            <div class="insurance-images">
+              <img src="Images/Landing_2.png" alt="Car Wash Image" class="car-wash-img responsive-img" width="800" height="600">
+            </div>
+          </div>
+        </td>
+      </tr>      
+    </table>
   </div>
+  
   <!-- Footer -->
-  <nav  class="bottom-nav">
+  <nav class="bottom-nav">
     <ul class="social-media">
       <li>
         <a href="https://www.google.com/maps/place/Speedo+water+wash/@12.9526916,80.205787,17z/data=!4m15!1m8!3m7!1s0x3a525dc84740dedb:0xe88a161128ed49e0!2s127,+Madhavan+St,+Sri+Balaji+Nagar,+Alaiamman+Nagar,+Pallikaranai,+Chennai,+Tamil+Nadu+600100!3b1!8m2!3d12.9526864!4d80.2083619!16s%2Fg%2F11l4vj2lwd!3m5!1s0x3a525de7ec56baf5:0x5af0f68c3d5ad723!8m2!3d12.9526316!4d80.2083918!16s%2Fg%2F11sw0z7hs6?entry=ttu" target="_blank">
-          <img src="Images/Location.png" alt="Location Logo"><br/>
-          127,Madhavan St, Sri Balaji Nagar,<br/>Pallikaranai, Ch-600100
+          <img src="Images/Location.png" alt="Location Logo" width="30" height="30"><br/>
+          127, Madhavan St, Sri Balaji Nagar,<br/>Pallikaranai, Ch-600100
         </a>
       </li>
-      <!-- <li>
-        <a href="https://api.whatsapp.com/send?phone=7010967338" target="_blank">
-          <img src="Images/Whatsapp.png" alt="WhatsApp Logo"><br/>
-          70109&nbsp;67338
-        </a>
-      </li> -->
       <li>
         <a href="https://www.facebook.com/profile.php?id=61557384205909" target="_blank">
-          <img src="Images/Facebook.png" alt="Facebook Logo"><br/>
+          <img src="Images/Facebook.png" alt="Facebook Logo" width="30" height="30"><br/>
           speedo_water_wash
         </a>
       </li>
       <li>
         <a href="tel:+917010967338" target="_blank">
-          <img src="Images/Call.png" alt="WhatsApp Logo"><br/>
+          <img src="Images/Call.png" alt="WhatsApp Logo" width="30" height="30"><br/>
           70109&nbsp;67338
         </a>
       </li>
       <li>
         <a href="https://www.instagram.com/speedo_water_wash" target="_blank">
-          <img src="Images/Instagram.png" alt="Instagram Logo"><br/>
+          <img src="Images/Instagram.png" alt="Instagram Logo" width="30" height="30"><br/>
           speedo_water_wash
         </a>
       </li>
       <li>
         <a href="mailto:info@Speedowaterwash@gmail.com">
-          <img src="Images/Mail.png" alt="Email Logo"><br/>
+          <img src="Images/Mail.png" alt="Email Logo" width="30" height="30"><br/>
           Speedowaterwash@gmail.com
         </a>
       </li>
