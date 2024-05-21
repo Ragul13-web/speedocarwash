@@ -1,30 +1,35 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
+/* Ensure table takes full width and height */
+.content-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+/* Remove all margin and padding from body, container, and table */
+body, .container, .content-table {
   margin: 0;
   padding: 0;
-  background-color: white; /* Light gray background */
-  color: #333; /* Dark gray font color */
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin: 150px 0;
 }
 
-h2 {
-  font-size: 24px;
-  font-weight: bold;
+body {
+  overflow-x: hidden;
 }
 
-p {
-  font-size: 16px;
+/* Make images responsive */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Navigation styles */
+/* Style for top navigation */
 .top-nav {
   position: fixed;
   top: 0;
@@ -40,32 +45,259 @@ p {
   flex-wrap: wrap;
 }
 
-.logo img {
-  width: 150px; /* Set a fixed width for the logo */
-  height: auto; /* Maintain aspect ratio */
+.top-nav .logo img {
+  height: 80px;
 }
 
-.nav-links, .bottom-nav ul {
+.top-nav .nav-links {
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow contents to wrap */
+  padding: 0;
 }
 
-.nav-links li, .bottom-nav li {
-  margin-right: 40px;
+.top-nav .nav-links li {
+  display: inline;
+  padding: 14px 20px;
   font-weight: bold;
 }
 
-.nav-links a, .bottom-nav a {
+.top-nav .nav-links a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color change and transform */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links a:hover, .bottom-nav a:hover {
+.top-nav .nav-links a:hover {
   color: black; /* Change font color to black on hover */
   transform: scale(1.1); /* Scale up the nav link on hover */
+  text-decoration: underline;
+}
+
+.logo img {
+  width: 150px; /* Set a fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;
+  border-radius: 10px;
+}
+/* About Us section styles */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-section h3 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #2eaaea;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.about-img {
+  flex: 1;
+  width: 55%; /* Ensure the image takes up half the width */
+}
+
+.about-text {
+  flex: 1;
+  padding-left: 20px; /* Add some space between the image and the text */
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #2eaaea;
+  color: #fff;
+  padding: 8px; /* Add padding for better readability */
+  border-radius: 5px; /* Add border radius for smoother look */
+}
+
+/* Service sections */
+#services h3 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #2eaaea;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Service item text */
+.service-item p {
+  color: #2eaaea; /* Theme color for service names */
+  font-weight: bold;
+}
+/* Style for service button group */
+.service-button-group {
+  text-align: center;
+  display: flex;
+  justify-content: space-around; /* Distribute space evenly between items */
+  align-items: center;
+  padding: 0 10px; /* Add padding for spacing */
+  margin-bottom: 20px; /* Add some space below the buttons */
+}
+
+/* Smaller service logos */
+.service-logo {
+  width: 10px; /* Smaller size */
+  height: auto;
+}
+
+/* Larger service button group images */
+.service-button-group button img {
+  width: 80%; /* Larger size */
+  height: auto;
+  transition: transform 0.3s ease; /* Transition effect for images */
+}
+
+/* Service rows */
+.service-row {
+  display: flex;
+  justify-content: space-around; /* Distribute space evenly between items */
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  background-color: #fff;
+  margin-bottom: 20px; /* Add some space below each row */
+}
+
+/* Service items */
+.service-item {
+  text-align: center; /* Center align text under images */
+  margin: 10px; /* Add margin for spacing */
+  display: flex;
+}
+
+.service-item img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  margin: 5px; /* Add space between image and text */
+  transition: transform 0.3s ease; /* Transition effect for images */
+}
+.service-item p{
+  margin: 10px;
+}
+
+/* Scale up images on hover */
+.service-row img:hover, .service-button-group button img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add margins to the service section images */
+.service-images {
+  margin-top: 20px; /* Add some space above the images */
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  justify-content: space-around;
+}
+/* Style for Multi Brand Services heading */
+#multi-brand-services h3 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #2eaaea;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Multi Brand Services image */
+.multi-brand-img {
+  width: 100%;
+  height: auto;
+}
+/* General styles for the section */
+.insurance-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.insurance-images {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.insurance-img, .car-wash-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.insurance-text {
+  margin: 0 auto; /* Center horizontally */
+  text-align: center;
+}
+
+.insurance-content h3 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2eaaea;
+}
+
+.insurance-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #2eaaea;
+  color: #fff;
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 5px; /* Add border radius for smoother look */
+}
+
+.line {
+  width: 99%;
+  height: 2px;
+  background-color: #2eaaea;
+  margin: 20px 0;
+}
+
+/* Style for bottom navigation */
+.bottom-nav {
+  width: 100%;
+  background-color: #2eaaea;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-nav .social-media {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav .social-media li {
+  display: block;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.bottom-nav .social-media a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bottom-nav .social-media a:hover {
+  color: #000;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.bottom-nav .social-media img {
+  display: block;
+  margin: 0 auto;
+  width: 40px; /* Set a fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* CSS styles for the fixed button */
@@ -82,6 +314,7 @@ p {
   text-decoration: none; /* Remove underline */
   transition: transform 0.3s ease; /* Smooth transition */
   z-index: 1000;
+  font-weight: bold;
 }
 
 /* Style on hover */
@@ -91,423 +324,47 @@ p {
   color: black; /* Change font color to black on hover */
 }
 
-/* Home section styles
-#home {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 140px; 
-}
-
-.shop-details {
-  display: flex;
-  flex-grow: 1;  
-}
-
-.left-image {
-  flex-grow: 1; 
-  width: 90%; 
-  height: auto; 
-  position: relative;
-  left: 15px;
-}
-.left-image img {
-  max-width: 100%;
-  height: auto;
-  top: 0; 
-  left: 0; 
-  z-index: 1; 
-}
-
-.right-image {
-  flex-grow: 1; 
-  width: 110%;
-  height: auto;
-  position: relative;
-  right: 15px;
-}
-
-
-.right-image img {
-  max-width: 100%; 
-  height: auto;
-  position: relative; 
-  top: 0;
-  left: 0; 
-  z-index: 1;
-}
-
-.info-image {
-  position: relative;
-  top: 100%;
-  left: 0%;
-  height: auto;
-}*/
-#home {
-  text-align: center; /* Center-align the content */
-  padding: 20px; /* Add padding */
-  margin-top: 150px;
-}
-
-#home img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto;
-}
-/* About section styles */
-#about {
-  text-align: center; /* Center-align the content */
-  padding: 20px; /* Add padding */
-}
-
-#about img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto;
-}
-
-/* Service section styles */
-#services {
-  text-align: center; /* Center-align the content */
-  padding: 20px; /* Add some padding */
-  margin: 100px 0;
-}
-
-.service-image {
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  transition: transform 0.3s ease;
-}
-
-.service-image:hover {
-  transform: scale(1.05);
-}
-
-.service-images {
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-  justify-content: space-around; /* Distribute items evenly along the main axis */
-  margin-top: 80px;
-}
-.service-images img {
-  width: 150px; /* Adjust service images size */
-  height: auto; /* Maintain aspect ratio */
-}
-.service-row {
-  display: flex;
-  justify-content: center; /* Center the images horizontally */
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-}
-
-.service-row img {
-  width: calc(33.33% - 20px); /* Set a fixed width for the images */
-  height: auto; /* Maintain aspect ratio */
-  margin: 10px; /* Add some horizontal spacing between images */
-  transition: box-shadow 0.3s ease; /* Add transition for box-shadow effect */
-}
-
-.service-row img:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow effect on hover */
-  transform: scale(1.1); /* Scale the image on hover */
-}
-
-.service-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  justify-content: space-between;
-}
-
-.service-button-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  border: none; /* Ensure no borders are applied */
-  background-color: #fff;
-}
-
-.service-logo {
-  width: calc(33.33% - 5px); /* Same size as the nav bar logo */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0;/* Space between logos */
-  padding: 0 50px;
-}
-
-.service-button-group button img {
-  width: 80%; /* Adjust the button image size to match service images */
-  height: 150%; /* Maintain aspect ratio */
-  cursor: pointer;
-}
-
-
-/* Multi-Brand Services section styles */
-#multi-services {
-  text-align: center; /* Center-align the content */
-  padding: 20px; /* Add padding */
-}
-
-.multi-brand-img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto; /* Ensure the image doesn't exceed the screen height */
-}
-
-/* Insurance section styles */
-#insurance-services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.insurance-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
-  margin-bottom: 20px;
-}
-.insurance-img {
-  width: 80%;
-  height: auto;
-  margin-right: 20px;
-}
-.insurance-text {
-  max-width: 50%;  
-  text-align: center;
-}
-
-.insurance-text h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #2eaaea;
-}
-
-.insurance-text p {
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-.car-wash-img {
-  max-width: 100%;
-  height: auto;
-}
-.insurance-images {
-  display: flex;
-  flex-direction: column; /* Arrange images in a column */
-  align-items: center; /* Center the images horizontally */
-}
-
-.line {
-  width: 100%;
-  height: 2px;
-  background-color: #2eaaea;
-  margin: 10px 0;
-}
-
-
-/* Footer styles */
-/* Second Navigation styles */
-.bottom-nav {
-  width: 100%; /* Adjust width for mobile devices */
-  background-color: #2eaaea;
-  color: #fff;
-  padding: 10px 20px;
-  z-index: 1000;
-  position: relative;
-  margin: auto; /* Center-align the navigation */
-  flex-wrap: wrap; /* Allow contents to wrap */
-  justify-content: space-between; /* Center-align contents */
-}
-
-.bottom-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottom-nav li {
-  margin-right: 20px;
-  font-size: 11px;
-}
-
-.bottom-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.bottom-nav a:hover {
-  text-decoration: underline;
-}
-.bottom-nav img {
-  width: 40px; /* Set a fixed width for the logo */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  /* Center-align contents within the container for smaller screens */
-  .container {
-    padding: 0 10px; /* Add padding for better spacing on smaller screens */
-    justify-content: center;
-    margin: 50% 0 0 0;
-  }
-
-  /* Center-align the footer social media icons */
-  .social-media {
-    justify-content: center;
-  }
-
-  /* Center-align the navigation links */
-  .nav-links {
-    justify-content: center;
-  }
-
-  /* Center-align the logo */
-  .logo {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  /* Center-align the enquiry button */
-  .enquiry-button {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px; /* Adjust as needed */
-  }
-
-  /* Hide the info image on smaller screens */
-  .info-image {
-    display: none;
-  }
-
-  /* Adjust margin between sections for smaller screens */
-  #home,
-  #about {
-    width: 100%; /* Set width to 100% for mobile devices */
-    margin: 0; /* Remove margin */
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .service-row img, .service-button-group button img, .service-logo {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0; /* Remove margin for full width display */
     padding: 0; /* Remove padding */
   }
-  #home {
-    margin-top: 160px; /* Adjust margin to keep content below navigation */
+
+  .top-nav {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Adjust padding */
   }
 
-  /* Increase size of about us image for mobile */
-  #about img {
-    max-width: 90%; /* Increase max-width for better visibility */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Center-align all section contents for mobile */
-  #home,
-  #about,
-  #services,
-  #multi-services,
-  #insurance-services {
-    text-align: center; /* Center-align the content */
-    padding: 20px; /* Add padding for better spacing */
-    margin: auto; /* Center the sections */
-  }
-}
-
-/* Media query for navigation bar */
-@media screen and (max-width: 768px) {
-  /* Adjust the padding of the navigation */
-  .top-nav, .bottom-nav {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .top-nav li, .bottom-nav li {
-   padding:  15px;
-    margin: 0;
-  }
- .bottom-nav{
-  padding: 0 20px;
- }
-  /* Center-align the logo */
-  .logo {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  /* Adjust the padding of the navigation */
-  .top-nav, .bottom-nav {
-    padding: 10px 0;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-}
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-  .service-row img {
-    width: calc(30% - 20px); /* Set a fixed width for the images */
-  }
-  .service-row {
-    flex-wrap: wrap;
-  }
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 375px) {
-  .service-row img {
-    width: calc(100% - 20px); /* Set a fixed width for the images */
-  }
-  #home{
-    margin-top: 160px;
-  }
-  .service-row {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .insurance-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .insurance-img,
-  .insurance-text,
-  .car-wash-img {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .insurance-img {
-    margin-bottom: 20px;
-  }
-}
-/* Media query for smaller screens */
-@media screen and (max-width: 576px) {
-  /* Adjust the width of the navigation bars */
-  .top-nav, .bottom-nav {
+  .top-nav .nav-links li {
+    display: block;
     padding: 10px 0; /* Adjust padding */
   }
 
-  /* Make home section visible on smaller screens */
-  #home {
-    margin-top: 140px; /* Adjust margin to keep content below navigation */
+  .top-nav .logo img {
+    width: 100px; /* Adjust logo size */
   }
 
-  /* Increase size of about us image for smaller screens */
-  #about img {
-    max-width: 100%; /* Increase max-width for better visibility */
-    height: auto; /* Maintain aspect ratio */
+  .bottom-nav .social-media {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px 0; /* Adjust padding */
   }
 
-  /* Center-align all section contents for smaller screens */
-  #home,
-  #about,
-  #services,
-  #multi-services,
-  #insurance-services {
-    text-align: center; /* Center-align the content */
-    padding: 20px; /* Add padding for better spacing */
-    margin: auto; /* Center the sections */
+  .bottom-nav .social-media li {
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .enquiry-button {
+    left: 10px; /* Adjust position */
+    bottom: 50px; /* Adjust position */
+  }
+}
+
+@media (min-width: 769px) {
+  .service-row img, .service-button-group button img, .service-logo {
+    width: 30%; /* Set appropriate width for larger screens */
+    margin: 0; /* Remove margin for full width display */
+    padding: 0; /* Remove padding */
   }
 }
