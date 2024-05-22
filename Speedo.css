@@ -15,7 +15,7 @@ body, .container, .content-table {
 }
 
 .container {
-  margin: 150px 0;
+  margin: 130px 0;
 }
 
 body {
@@ -163,18 +163,26 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allow images to wrap on smaller screens */
   justify-content: space-around; /* Distribute items evenly along the main axis */
-  margin-top: 80px;
+  margin: 80px 10px 0 50px;
 }
 
 .service-row {
   display: flex;
   justify-content: space-around; /* Distribute space evenly between items */
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  align-items: center;
   background-color: #fff;
-  margin-bottom: 20px; /* Add some space below each row */
   transition: transform 0.3s ease; /* Transition effect for images */
+  width: 30%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
-
+.service-row img{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+}
 .service-row img:hover, .service-button-group button img:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow effect on hover */
   transform: scale(1.05); /* Scale the image on hover */
@@ -313,168 +321,52 @@ body {
 }
 
 /* Media queries for responsive design */
-
-/* Media queries for responsiveness */
+/* Media query for about us section on smaller devices */
 @media screen and (max-width: 768px) {
-  /* Center-align contents within the container for smaller screens */
-  .container {
-    padding: 0 10px; /* Add padding for better spacing on smaller screens */
-    justify-content: center;
-    margin: 0 50% 0 0;
+  .about-content {
+    flex-direction: column; /* Stack the image and text vertically */
   }
-
-  /* Center-align the footer social media icons */
-  .social-media {
-    justify-content: center;
+  .about-img, .about-text {
+    width: 100%; /* Ensure both image and text take up full width */
   }
-
-  /* Center-align the navigation links */
-  .nav-links {
-    justify-content: center;
+  .about-text {
+    padding-left: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add some space above the text */
   }
-
-  /* Center-align the logo */
-  .logo {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  /* Center-align the enquiry button */
-  .enquiry-button {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px; /* Adjust as needed */
-  }
-
-  /* Hide the info image on smaller screens */
-  .info-image {
-    display: none;
-  }
-
-  /* Adjust margin between sections for smaller screens */
-  #home,
-  #about {
-    width: 100%; /* Set width to 100% for mobile devices */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
-  }
-  #home {
-    margin-top: 160px; /* Adjust margin to keep content below navigation */
-  }
-
-  /* Increase size of about us image for mobile */
-  #about img {
-    max-width: 90%; /* Increase max-width for better visibility */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Center-align all section contents for mobile */
-  #home,
-  #about,
-  #services,
-  #multi-services,
-  #insurance-services {
-    text-align: center; /* Center-align the content */
-    padding: 20px; /* Add padding for better spacing */
-    margin: auto; /* Center the sections */
+  .about-text p {
+    font-size: 16px; /* Adjust font size for better readability on small screens */
+    padding: 15px; /* Add padding for better spacing */
   }
 }
 
-/* Media query for navigation bar */
+/* Media query for bottom navigation alignment on mobile devices */
 @media screen and (max-width: 768px) {
-  /* Adjust the padding of the navigation */
-  .top-nav, .bottom-nav {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .top-nav li, .bottom-nav li {
-   padding: 15px;
-   margin: 0;
-  }
- .bottom-nav{
-  padding: 0 20px;
- }
-  /* Center-align the logo */
-  .logo {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  /* Adjust the padding of the navigation */
-  .top-nav, .bottom-nav {
-    padding: 10px 0;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-}
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-  .service-row img {
-    width: calc(30% - 20px); /* Set a fixed width for the images */
-  }
-  .service-row {
-    flex-wrap: wrap;
-  }
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 375px) {
-  .service-row img {
-    width: calc(100% - 20px); /* Set a fixed width for the images */
-  }
-  #home{
-    margin-top: 160px;
-  }
-  .service-row {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .insurance-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .insurance-img,
-  .insurance-text,
-  .car-wash-img {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .insurance-img {
-    margin-bottom: 20px;
-  }
-}
-/* Media query for smaller screens */
-@media screen and (max-width: 576px) {
-  /* Adjust the width of the navigation bars */
-  .top-nav, .bottom-nav {
+  .bottom-nav {
+    flex-direction: column; /* Stack the social media links vertically */
+    align-items: center; /* Center-align the content */
     padding: 10px 0; /* Adjust padding */
   }
-
-  /* Make home section visible on smaller screens */
-  #home {
-    margin-top: 140px; /* Adjust margin to keep content below navigation */
+  .bottom-nav .social-media {
+    width: 100%; /* Take full width */
+    justify-content: center; /* Center-align the social media links */
+    margin-bottom: 10px; /* Add some space below the links */
   }
-
-  /* Increase size of about us image for smaller screens */
-  #about img {
-    max-width: 100%; /* Increase max-width for better visibility */
-    height: auto; /* Maintain aspect ratio */
+  .bottom-nav .social-media li {
+    margin: 5px 0; /* Add margin between the social media items */
   }
+}
 
-  /* Center-align all section contents for smaller screens */
-  #home,
-  #about,
-  #services,
-  #multi-services,
-  #insurance-services {
-    text-align: center; /* Center-align the content */
-    padding: 20px; /* Add padding for better spacing */
-    margin: auto; /* Center the sections */
+/* Additional adjustments for smaller screens */
+@media screen and (max-width: 576px) {
+  .bottom-nav {
+    padding: 10px 0; /* Adjust padding */
+  }
+  .bottom-nav .social-media {
+    justify-content: center; /* Center-align the social media links */
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
+  }
+  .bottom-nav .social-media li {
+    margin: 5px 10px; /* Add some horizontal margin for better spacing */
   }
 }
