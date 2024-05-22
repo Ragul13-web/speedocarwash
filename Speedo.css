@@ -121,6 +121,11 @@ body {
 }
 
 /* Service sections */
+#services {
+  text-align: center; /* Center-align the content */
+  padding: 20px; /* Add some padding */
+  margin: 100px 0;
+}
 #services h3 {
   font-size: 70px;
   font-weight: bold;
@@ -128,73 +133,53 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
-/* Service item text */
-.service-item p {
-  color: #2eaaea; /* Theme color for service names */
-  font-weight: bold;
-}
-/* Style for service button group */
 .service-button-group {
-  text-align: center;
   display: flex;
-  justify-content: space-around; /* Distribute space evenly between items */
+  justify-content: center;
   align-items: center;
-  padding: 0 10px; /* Add padding for spacing */
-  margin-bottom: 20px; /* Add some space below the buttons */
+  margin-top: 10px;
+  border: none; /* Ensure no borders are applied */
+  background-color: #fff;
 }
-
-/* Smaller service logos */
-.service-logo {
-  width: 10px; /* Smaller size */
+.service-button-group .service-logo {
+  width: 300px; /* Smaller size to match top nav logo size */
   height: auto;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-around;
 }
-
-/* Larger service button group images */
-.service-button-group button img {
-  width: 80%; /* Larger size */
+.service-button-group button{
+  background-color: #fff;
+}
+.service-button-group button .service-button {
+  width: 500px;
   height: auto;
   transition: transform 0.3s ease; /* Transition effect for images */
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+.service-images {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+  margin-top: 80px;
 }
 
-/* Service rows */
 .service-row {
   display: flex;
   justify-content: space-around; /* Distribute space evenly between items */
   flex-wrap: wrap; /* Allow images to wrap on smaller screens */
   background-color: #fff;
   margin-bottom: 20px; /* Add some space below each row */
-}
-
-/* Service items */
-.service-item {
-  text-align: center; /* Center align text under images */
-  margin: 10px; /* Add margin for spacing */
-  display: flex;
-}
-
-.service-item img {
-  width: 100%; /* Make images responsive */
-  height: auto;
-  margin: 5px; /* Add space between image and text */
   transition: transform 0.3s ease; /* Transition effect for images */
 }
-.service-item p{
-  margin: 10px;
-}
 
-/* Scale up images on hover */
 .service-row img:hover, .service-button-group button img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow effect on hover */
+  transform: scale(1.05); /* Scale the image on hover */
 }
 
-/* Add margins to the service section images */
-.service-images {
-  margin-top: 20px; /* Add some space above the images */
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-  justify-content: space-around;
-}
 /* Style for Multi Brand Services heading */
 #multi-brand-services h3 {
   font-size: 70px;
@@ -262,8 +247,11 @@ body {
   width: 100%;
   background-color: #2eaaea;
   overflow: hidden;
-  position: fixed;
   bottom: 0;
+  position: relative;
+  margin: auto; /* Center-align the navigation */
+  flex-wrap: wrap; /* Allow contents to wrap */
+  justify-content: space-between; /* Center-align contents */
 }
 
 .bottom-nav .social-media {
