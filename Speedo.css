@@ -317,83 +317,53 @@ body {
   color: black; /* Change font color to black on hover */
 }
 
-/* Media query for screen size 375px */
-@media screen and (max-width: 375px) {
-  .about-content, .service-images, .insurance-content {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content */
-  }
-  .about-img, .about-text, .insurance-img, .car-wash-img {
-    width: 100%; /* Ensure elements take full width */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
-  }
-  .about-text p, .insurance-text p {
-    font-size: 30px; /* Set font size for p elements */
-    padding: 0; /* Remove padding */
-  }
-  .service-row {
-    justify-content: center; /* Center-align images */
-  }
-}
-
-/* Media query for screen size 576px */
-@media screen and (max-width: 576px) {
-  .about-content, .service-images, .insurance-content {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content */
-  }
-  .about-img, .about-text, .insurance-img, .car-wash-img {
-    width: 100%; /* Ensure elements take full width */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
-  }
-  .about-text p, .insurance-text p {
-    font-size: 30px; /* Set font size for p elements */
-    padding: 0; /* Remove padding */
-  }
-  .service-row {
-    justify-content: center; /* Center-align images */
-  }
-}
-
-/* Media query for screen size 768px */
+/* Media queries for responsive design */
+/* Media query for about us section on smaller devices */
 @media screen and (max-width: 768px) {
-  .about-content, .service-images, .insurance-content {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content */
+  .about-content {
+    flex-direction: column; /* Stack the image and text vertically */
   }
-  .about-img, .about-text, .insurance-img, .car-wash-img {
-    width: 100%; /* Ensure elements take full width */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
+  .about-img, .about-text {
+    width: 100%; /* Ensure both image and text take up full width */
   }
-  .about-text p, .insurance-text p {
-    font-size: 30px; /* Set font size for p elements */
-    padding: 0; /* Remove padding */
+  .about-text,.insurance-text {
+    padding-left: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add some space above the text */
   }
-  .service-row {
-    justify-content: center; /* Center-align images */
+  .about-text p,.insurance-text p {
+    font-size: 24px; /* Adjust font size for better readability on small screens */
+    padding: 15px; /* Add padding for better spacing */
   }
 }
 
-/* Media query for screen size 1200px */
-@media screen and (max-width: 1200px) {
-  .about-content, .service-images, .insurance-content {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content */
+/* Media query for bottom navigation alignment on mobile devices */
+@media screen and (max-width: 768px) {
+  .bottom-nav {
+    flex-direction: column; /* Stack the social media links vertically */
+    align-items: center; /* Center-align the content */
+    padding: 10px 0; /* Adjust padding */
   }
-  .about-img, .about-text, .service-row img, .insurance-img, .car-wash-img {
-    width: 100%; /* Ensure elements take full width */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
+  .bottom-nav .social-media {
+    width: 100%; /* Take full width */
+    justify-content: center; /* Center-align the social media links */
+    margin-bottom: 10px; /* Add some space below the links */
   }
-  .about-text p, .insurance-text p {
-    font-size: 30px; /* Set font size for p elements */
-    padding: 0; /* Remove padding */
+  .bottom-nav .social-media li {
+    margin: 5px 0; /* Add margin between the social media items */
   }
-  .service-row {
-    width: 100%; /* Full width for service row */
-    justify-content: center; /* Center-align images */
+}
+
+/* Additional adjustments for smaller screens */
+@media screen and (max-width: 576px) {
+  .bottom-nav {
+    padding: 10px 0; /* Adjust padding */
+  }
+  .bottom-nav .social-media {
+    justify-content: center; /* Center-align the social media links */
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
+  }
+  .bottom-nav .social-media li {
+    margin: 5px 10px; /* Add some horizontal margin for better spacing */
   }
 }
