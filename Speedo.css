@@ -255,11 +255,8 @@ body {
   width: 100%;
   background-color: #2eaaea;
   overflow: hidden;
+  position: fixed;
   bottom: 0;
-  position: relative;
-  margin: auto; /* Center-align the navigation */
-  flex-wrap: wrap; /* Allow contents to wrap */
-  justify-content: space-between; /* Center-align contents */
 }
 
 .bottom-nav .social-media {
