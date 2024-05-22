@@ -333,7 +333,6 @@ body {
     padding: 0; /* Remove padding */
   }
   .service-row {
-    width: 100%; /* Full width for service row */
     justify-content: center; /* Center-align images */
   }
 }
@@ -354,7 +353,6 @@ body {
     padding: 0; /* Remove padding */
   }
   .service-row {
-    width: 100%; /* Full width for service row */
     justify-content: center; /* Center-align images */
   }
 }
@@ -375,7 +373,6 @@ body {
     padding: 0; /* Remove padding */
   }
   .service-row {
-    width: 100%; /* Full width for service row */
     justify-content: center; /* Center-align images */
   }
 }
