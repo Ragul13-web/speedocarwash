@@ -15,7 +15,7 @@ body, .container, .content-table {
 }
 
 .container {
-  margin: 130px 0;
+  margin: 150px 0;
 }
 
 body {
@@ -326,14 +326,19 @@ body {
   .about-img, .about-text {
     width: 100%; /* Ensure both image and text take up full width */
   }
-  .about-text {
+  .about-text,.insurance-text {
     padding-left: 0; /* Remove padding on smaller screens */
     text-align: center; /* Center-align the text */
     margin-top: 20px; /* Add some space above the text */
   }
-  .about-text p {
-    font-size: 16px; /* Adjust font size for better readability on small screens */
+  .about-text p,.insurance-text p {
+    font-size: 24px; /* Adjust font size for better readability on small screens */
     padding: 15px; /* Add padding for better spacing */
+  }
+  .enquiry-button {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px; /* Adjust as needed */
   }
 }
 
