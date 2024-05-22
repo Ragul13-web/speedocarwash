@@ -367,3 +367,18 @@ body {
     margin: 5px 10px; /* Add some horizontal margin for better spacing */
   }
 }
+@media screen and (max-width: 375px) {
+  .about-content, .service-images, .insurance-content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content */
+  }
+  .about-img, .about-text, .insurance-img, .car-wash-img {
+    width: 100%; /* Ensure elements take full width */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+  }
+  .about-text p, .insurance-text p {
+    font-size: 30px; /* Set font size for p elements */
+    padding: 0; /* Remove padding */
+  }
+}
