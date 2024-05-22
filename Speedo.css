@@ -313,46 +313,168 @@ body {
 }
 
 /* Media queries for responsive design */
-@media (max-width: 768px) {
-  .service-row img, .service-button-group button img, .service-logo {
-    width: 100%; /* Full width on smaller screens */
-    margin: 0; /* Remove margin for full width display */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Center-align contents within the container for smaller screens */
+  .container {
+    padding: 0 10px; /* Add padding for better spacing on smaller screens */
+    justify-content: center;
+    margin: 0 50% 0 0;
+  }
+
+  /* Center-align the footer social media icons */
+  .social-media {
+    justify-content: center;
+  }
+
+  /* Center-align the navigation links */
+  .nav-links {
+    justify-content: center;
+  }
+
+  /* Center-align the logo */
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* Center-align the enquiry button */
+  .enquiry-button {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px; /* Adjust as needed */
+  }
+
+  /* Hide the info image on smaller screens */
+  .info-image {
+    display: none;
+  }
+
+  /* Adjust margin between sections for smaller screens */
+  #home,
+  #about {
+    width: 100%; /* Set width to 100% for mobile devices */
+    margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
   }
-
-  .top-nav {
-    flex-direction: column; /* Stack items vertically */
-    padding: 10px; /* Adjust padding */
+  #home {
+    margin-top: 160px; /* Adjust margin to keep content below navigation */
   }
 
-  .top-nav .nav-links li {
-    display: block;
-    padding: 10px 0; /* Adjust padding */
+  /* Increase size of about us image for mobile */
+  #about img {
+    max-width: 90%; /* Increase max-width for better visibility */
+    height: auto; /* Maintain aspect ratio */
   }
 
-  .top-nav .logo img {
-    width: 100px; /* Adjust logo size */
-  }
-
-  .bottom-nav .social-media {
-    flex-direction: column; /* Stack items vertically */
-    padding: 10px 0; /* Adjust padding */
-  }
-
-  .bottom-nav .social-media li {
-    padding: 10px 0; /* Adjust padding */
-  }
-
-  .enquiry-button {
-    left: 10px; /* Adjust position */
-    bottom: 50px; /* Adjust position */
+  /* Center-align all section contents for mobile */
+  #home,
+  #about,
+  #services,
+  #multi-services,
+  #insurance-services {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding for better spacing */
+    margin: auto; /* Center the sections */
   }
 }
 
-@media (min-width: 769px) {
-  .service-row img, .service-button-group button img, .service-logo {
-    width: 30%; /* Set appropriate width for larger screens */
-    margin: 0; /* Remove margin for full width display */
-    padding: 0; /* Remove padding */
+/* Media query for navigation bar */
+@media screen and (max-width: 768px) {
+  /* Adjust the padding of the navigation */
+  .top-nav, .bottom-nav {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .top-nav li, .bottom-nav li {
+   padding: 15px;
+   margin: 0;
+  }
+ .bottom-nav{
+  padding: 0 20px;
+ }
+  /* Center-align the logo */
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Adjust the padding of the navigation */
+  .top-nav, .bottom-nav {
+    padding: 10px 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .service-row img {
+    width: calc(30% - 20px); /* Set a fixed width for the images */
+  }
+  .service-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 375px) {
+  .service-row img {
+    width: calc(100% - 20px); /* Set a fixed width for the images */
+  }
+  #home{
+    margin-top: 160px;
+  }
+  .service-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .insurance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .insurance-img,
+  .insurance-text,
+  .car-wash-img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .insurance-img {
+    margin-bottom: 20px;
+  }
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 576px) {
+  /* Adjust the width of the navigation bars */
+  .top-nav, .bottom-nav {
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  /* Make home section visible on smaller screens */
+  #home {
+    margin-top: 140px; /* Adjust margin to keep content below navigation */
+  }
+
+  /* Increase size of about us image for smaller screens */
+  #about img {
+    max-width: 100%; /* Increase max-width for better visibility */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Center-align all section contents for smaller screens */
+  #home,
+  #about,
+  #services,
+  #multi-services,
+  #insurance-services {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding for better spacing */
+    margin: auto; /* Center the sections */
   }
 }
